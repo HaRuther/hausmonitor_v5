@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<section class=card><h1>Ablesungen</h1><form method=post>{% for p in points %}<fieldset><legend>{{p}}</legend>{% for i in range(5) %}<input name={{p}} inputmode=decimal value="{{g[p][i] if g[p]|length>i else ''}}">{% endfor %}</fieldset>{% endfor %}<button>Speichern</button></form></section>{% endblock %}
